@@ -1,3 +1,5 @@
+package com.datastructures.linkedlist;
+
 public class Node {
 	private int num;
 	public Node next;

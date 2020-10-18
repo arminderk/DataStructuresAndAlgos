@@ -5,13 +5,13 @@ public class Main {
 		Node n1 = new Node(1);
 		Node n2 = new Node(2);
 		Node n3 = new Node(2);
+		Node n4 = new Node(5);
 		
 		LinkedList l = new LinkedList();
-		l.insertAtHead(n1);
-		l.insertAtHead(n2);
-		l.insertAtHead(n3);
-		l.print();
-		l.removeDups();
+		l.pushFront(n1);
+		l.pushFront(n2);
+		l.pushFront(n3);
+		l.pushBack(n4);
 		l.print();
 	}
 }

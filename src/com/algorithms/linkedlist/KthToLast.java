@@ -1,7 +1,5 @@
 package com.algorithms.linkedlist;
-
-import com.datastructures.linkedlist.LinkedList;
-import com.datastructures.linkedlist.Node;
+import com.datastructures.linkedlist.*;
 
 public class KthToLast {
 	public static void main(String[] args) {

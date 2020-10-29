@@ -3,14 +3,14 @@ import com.datastructures.linkedlist.*;
 
 public class DeleteMiddleNode {
 	public static void main(String[] args) {
-		Node n1 = new Node(1);
-		Node n2 = new Node(2);
-		Node n3 = new Node(3);
-		Node n4 = new Node(4);
-		Node n5 = new Node(5);
-		Node n6 = new Node(6);
+		Node<Integer> n1 = new Node<Integer>(1);
+		Node<Integer> n2 = new Node<Integer>(2);
+		Node<Integer> n3 = new Node<Integer>(3);
+		Node<Integer> n4 = new Node<Integer>(4);
+		Node<Integer> n5 = new Node<Integer>(5);
+//		Node<Integer> n6 = new Node<Integer>(6);
 		
-		LinkedList l = new LinkedList();
+		LinkedList<Integer> l = new LinkedList<Integer>();
 		l.pushFront(n1);
 		l.pushFront(n2);
 		l.pushFront(n3);
@@ -21,8 +21,8 @@ public class DeleteMiddleNode {
 		l.print();
 	}
 	
-	public static void deleteMiddle(LinkedList list) {
-		Node i = list.getHead();
+	public static void deleteMiddle(LinkedList<Integer> list) {
+		Node<Integer> i = list.getHead();
 		int midIndex = list.size() / 2;
 		int counter = 1;
 		

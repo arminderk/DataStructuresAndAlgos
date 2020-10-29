@@ -1,7 +1,7 @@
 package com.datastructures.linkedlist;
 
-public class LinkedList {
-	private Node head;
+public class LinkedList<T> {
+	private Node<T> head;
 	private int size;
 	
 	public LinkedList() {
@@ -9,7 +9,7 @@ public class LinkedList {
 		this.size = 0;
 	}
 	
-	public Node getHead() {
+	public Node<T> getHead() {
 		return this.head;
 	}
 	
@@ -17,7 +17,7 @@ public class LinkedList {
 		return this.size;
 	}
 	
-	public void pushFront(Node n) {
+	public void pushFront(Node<T> n) {
 		if(head == null) {
 			head = n;
 		}
@@ -27,18 +27,18 @@ public class LinkedList {
 		}
 		
 		size++;
-		System.out.println("Node " + n.getNum() + " inserted at front");
+		System.out.println("Node " + n.getData() + " inserted at front");
 	}
 	
-	public int popFront() {
-		Node removed = head;
+	public Node<T> popFront() {
+		Node<T> removed = head;
 		head = head.next;
 		
-		return removed.getNum();
+		return removed;
 	}
 	
-	public void pushBack(Node n) {
-		Node lastElement = head;
+	public void pushBack(Node<T> n) {
+		Node<T> lastElement = head;
 		
 		while(lastElement.next != null) {
 			lastElement = lastElement.next;
@@ -46,35 +46,35 @@ public class LinkedList {
 		
 		lastElement.next = n;
 		size++;
-		System.out.println("Node " + n.getNum() + " inserted at back");
+		System.out.println("Node " + n.getData() + " inserted at back");
 	}
 	
-	public Node valueAt(Node n) {
-		if(head.getNum() == n.getNum()) {
-			System.out.println("Node " + n.getNum() + " found at head");
+	public Node<T> valueAt(Node<T> n) {
+		if(head.getData() == n.getData()) {
+			System.out.println("Node " + n.getData() + " found at head");
 			return head;
 		}
 		else {
-			Node i = head;
+			Node<T> i = head;
 			
 			while(i != null) {
-				if(i.getNum() == n.getNum()) {
-					System.out.println("Node " + n.getNum() + " found");
+				if(i.getData() == n.getData()) {
+					System.out.println("Node " + n.getData() + " found");
 					return n;
 				}
 				i = i.next;
 			}
 		}
 		
-		System.out.println("Node " + n.getNum() + " not found");
+		System.out.println("Node " + n.getData() + " not found");
 		return null;
 	}
 	
 	public void print() {
-		Node i = head;
+		Node<T> i = head;
 		
 		while(i != null) {
-			System.out.print(i.getNum() + " --> ");	
+			System.out.print(i.getData() + " --> ");	
 			i = i.next;
 		}
 		System.out.println("");

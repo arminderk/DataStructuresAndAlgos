@@ -1,15 +1,15 @@
 package com.datastructures.linkedlist;
 
-public class Node {
-	private int num;
-	public Node next;
+public class Node<T> {
+	private T type;
+	public Node<T> next;
 	
-	public Node(int n) {
-		this.num = n;
+	public Node(T type) {
+		this.type = type;
 		this.next = null;
 	}
 	
-	public int getNum() {
-		return num;
+	public T getData() {
+		return this.type;
 	}
 }
